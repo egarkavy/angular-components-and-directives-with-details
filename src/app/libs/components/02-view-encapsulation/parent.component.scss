@@ -1,0 +1,20 @@
+.border-to-all {
+    border: 1px solid black;
+
+    color: red;
+}
+
+.container {
+    width: 100px;
+    height: 100px;
+}
+
+.styling-target {
+    background-color: green;
+}
+
+// ::ng-deep { //do not do it like that!
+//     .styling-target {
+//         background-color: green;
+//     }
+// }

@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.m-3 {
+    margin: 1rem;
+    border: 1px dashed black;
+    padding: 0.25rem;
+}
+
+.app-background {
+    background-color: yellow;
+    display: block;
+}
+
+.huge-container {
+    width: 100px;
+    height: 100px;
+    display: block;
+}

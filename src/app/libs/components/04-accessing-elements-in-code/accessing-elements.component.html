@@ -1,0 +1,38 @@
+<div class="m-3">
+    <p>Reading element Ref</p>
+    <button #buttonTarget (click)="clickFirstButton()">I will be clicked in code! Am I clicked? {{buttonClicked}}</button>
+
+    <button mat-flat-button color="primary" (mouseenter)="clickOtherButton()">You hover - button clicked</button>
+</div>
+
+<div class="m-3">
+    <p>Reading components</p>
+
+    <app-child #childRef></app-child>
+
+    <button mat-flat-button color="primary" (click)="changeChildInternalState(childRef)">Access component in Code!</button>
+</div>
+
+<div class="m-3">
+    <p>Reading conflicting variable</p>
+
+    <app-child [childModifier]="true" #childConflictingRef="rofls"></app-child>
+
+    <button mat-flat-button color="primary" (click)="changeConflictingChild(childConflictingRef)">Access component in Code!</button>
+</div>
+
+<div class="m-3">
+    <p>Reading native element Ref avoiding component's </p>
+    <button #nativeButtonTarget mat-flat-button (click)="clickMatButton()">I will be clicked in code! Am I clicked? {{buttonClicked}}</button>
+
+    <button mat-flat-button color="primary" (mouseenter)="clickOtherButton()">You hover - button clicked</button>
+</div>
+
+<div class="m-3">
+    <p>Accessing multiple</p>
+
+    <app-child-one-of-many [userName]="user" *ngFor="let user of users"></app-child-one-of-many>
+
+    <button mat-flat-button color="primary" (click)="addNewUser()">Add new user</button>
+    <button mat-flat-button color="primary" (click)="killAllChildren()">Access each children sync</button>
+</div>

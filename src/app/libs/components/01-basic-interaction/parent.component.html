@@ -1,0 +1,9 @@
+<app-child-a [userName]="userName"></app-child-a>
+<app-child-b (logout)="logout()"></app-child-b>
+
+<div>
+    <span [ngStyle]="{fontSize: fontSize + 'px'}">Font Size change</span>
+    <app-child-c-two-way [(fontSize)]="fontSize">
+
+    </app-child-c-two-way>
+</div>
